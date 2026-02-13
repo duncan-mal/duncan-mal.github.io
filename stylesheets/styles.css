@@ -1,0 +1,110 @@
+/*Font Definition*/
+
+@font-face {
+    font-family: 'Bebas';
+    src: url("/fonts/BebasNeue-Regular.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*Home Page*/
+
+body{
+    background-color: linen;
+    font-family: Bebas, sans-serif;
+}
+.home .content{
+    display: flex;
+    animation: fade-in 1s;
+}
+
+.home .topbar{
+    display: flex;
+    border-bottom: slategray 1px solid;
+    padding-bottom: 1vh;
+}
+
+.home .topbar #name{
+    margin-left: 1vw;
+    padding: 0.15vw 0.15vw 0.15vw 0.15vw;
+}
+
+.home .topbar #home{
+    margin-right: 1vw;
+    margin-left: auto;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-color: darkslategrey;
+    border-radius: 1vh;
+    color: ghostwhite;
+}
+.home .topbar #projects{
+    margin-right: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 1vh;
+    transition: background-color 0.5s,color 0.5s;
+}
+
+.home .topbar #projects:hover{
+    background-color: darkslategrey;
+    color: ghostwhite;
+}
+.home .topbar #contact{
+    margin-right: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 1vh;
+    transition: background-color 0.5s,color 0.5s;
+}
+
+.home .topbar #contact:hover{
+    background-color: darkslategrey;
+    color: ghostwhite;
+}
+
+.home #message{
+    /*Margin*/
+    margin-top: 15vh;
+    margin-left: 15vw;
+
+}
+
+.home #pfp{
+    /*Margin*/
+    margin-top: 15vh;
+    margin-right: 15vw;
+    margin-left: auto;
+
+}
+
+.home #pfp img{
+    /*Image Size*/
+    width: 30vw;
+    height: 30vw;
+
+}
+
+.home .footer{
+    margin-top: 7vw;
+    display: flex;
+}
+
+.home .footer #linkedin{
+    margin-right: 1vw;
+    margin-left: auto;
+}
+.home .footer #github{
+    margin-right: 1vw;
+}

@@ -17,181 +17,286 @@
         opacity: 1;
     }
 }
-/*Mobile Home Page*/
-@media (hover: none){
-    .home .content{
+body{
+    background-color: ghostwhite;
+    font-family: Bebas, sans-serif;
+}
+
+
+.content{
+    display: flex;
+    animation: fade-in 1s;
+    margin-top: 15vw;
+}
+
+/*Home Page*/
+
+.home{
+
+    .topbar{
+        display: flex;
+        border-bottom: slategray 1px solid;
+        padding-bottom: 1vh;
+        font-size: 1.5vw;
+
+        #name {
+            margin-left: 1vw;
+            padding: 0.15vw 0.15vw 0.15vw 0.15vw;
+        }
+        #home{
+            margin-right: 1vw;
+            margin-left: auto;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            border-radius: 1vh;
+            text-decoration: rgb(166, 0, 0) underline;
+        }
+        #projects{
+            margin-right: 1vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            border-radius: 1vh;
+            color: black;
+            text-decoration: transparent underline;
+            transition: text-decoration 0.1s;
+        }
+        #projects:hover{
+            text-decoration: rgb(166, 0, 0) underline;
+        }
+        #contact{
+            margin-right: 1vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            border-radius: 1vh;
+            color: black;
+            text-decoration: transparent underline;
+            transition: text-decoration 0.1s;
+        }
+        #contact:hover{
+            text-decoration: rgb(166, 0, 0) underline;
+        }
+    }
+
+    #message{
+        /*Margin*/
+
+        margin-left: 15vw;
+        h1{
+            font-size: 5vw;
+            #coloredName{
+                color: rgb(166, 0, 0);
+            }
+        }
+        h4{
+            font-size: 2vw;
+        }
+
+    }
+
+    #pfp{
+        /*Margin*/
+        margin-right: 15vw;
+        margin-left: auto;
+        img{
+            /*Image Size*/
+            width: 30vw;
+            height: 30vw;
+
+        }
+    }
+
+    footer{
+        margin-top: 0.25vh;
+        display: flex;
+        margin-right: 0;
+        margin-left: auto;
+        animation: fade-in 1s;
+
+        #linkedin{
+            margin-right: 2vh;
+            margin-left: 15vw;
+            img {
+                width: 6vh;
+                height: auto;
+            }
+        }
+        #github{
+            margin-right: auto;
+            img {
+                width: 6vh;
+                height: auto;
+            }
+        }
+    }
+}
+
+.projects{
+
+    .topbar{
+        display: flex;
+        border-bottom: slategray 1px solid;
+        padding-bottom: 1vh;
+        font-size: 1.5vw;
+
+        #name {
+            margin-left: 1vw;
+            padding: 0.15vw 0.15vw 0.15vw 0.15vw;
+        }
+        #home{
+            margin-right: 1vw;
+            margin-left: auto;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            border-radius: 1vh;
+            color: black;
+            text-decoration: transparent underline;
+            transition: text-decoration 0.1s;
+        }
+        #home:hover{
+            text-decoration: rgb(166, 0, 0) underline;
+        }
+        #projects{
+            margin-right: 1vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            border-radius: 1vh;
+            color:black;
+            text-decoration: rgb(166, 0, 0) underline;
+        }
+        #contact{
+            margin-right: 1vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            border-radius: 1vh;
+            color: black;
+            text-decoration: transparent underline;
+            transition: text-decoration 0.1s;
+        }
+        #contact:hover{
+            text-decoration: rgb(166, 0, 0) underline;
+        }
+    }
+    #titleLine {
+        font-size: 5vw;
+        text-align: center;
+        text-decoration: black underline;
+        animation: fade-in 1s;
+        }
+    .content{
+        display: flex;
+        animation: fade-in 1s;
+        margin-top: 2vw;
+        flex-direction: column;
+    }
+    .project{
+        height: auto;
+        width: auto;
+        border: 10px solid;
+        border-radius: 10px;
+        margin: 5vw 5vw 0;
+        background-color: ghostwhite;
+        transition: filter 0.1s, margin 0.1s;
+
+        .projectTitle{
+            display: flex;
+            h3{
+                font-size: 2vw;
+                margin-left: 0.75vw;
+            }
+            h4{
+                font-size: 1vw;
+                margin-right: 0.75vw;
+                margin-left: auto;
+            }
+        }
+        .projectDescription{
+            margin-left: 0.75vw;
+            margin-right: 0.75vw;
+        }
+    }
+    .project:hover{
+        filter: drop-shadow(0px 1vh 0px grey);
+        margin-top: 4vw;
+        margin-bottom: 1vw;
+    }
+}
+
+
+
+@media (orientation: portrait) {
+    .content {
         display: flex;
         animation: fade-in 1s;
         flex-direction: column;
     }
-    .home .topbar{
+
+    .home #message {
+        order: 2;
+        margin-left: calc(50% - 16vh);
+        margin-right: auto;
+        margin-top: 5vh;
+
+        h1 {
+            font-size: 6vh;
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 2vh;
+            text-align: center;
+        }
+    }
+
+    .home #pfp {
+        margin-left: calc(50% - 15vh);
+        margin-top: 5vh;
+
+        img {
+
+            width: 30vh;
+            height: 30vh;
+        }
+    }
+
+    .topbar {
         display: flex;
         border-bottom: slategray 1px solid;
         padding-bottom: 1vh;
+        font-size: 30px;
     }
 
-    .home .topbar #name{
-        margin-left: 1vw;
-        padding: 0.15vw 0.15vw 0.15vw 0.15vw;
-    }
-
-    .home .topbar #home{
-        margin-right: 1vw;
-        margin-left: auto;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        background-color: darkslategrey;
-        border-radius: 1vh;
-        color: ghostwhite;
-    }
-    .home .topbar #projects{
-        margin-right: 1vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        border-radius: 1vh;
-        transition: background-color 0.5s,color 0.5s;
-    }
-
-    .home .topbar #projects:hover{
-        background-color: darkslategrey;
-        color: ghostwhite;
-    }
-    .home .topbar #contact{
-        margin-right: 1vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        border-radius: 1vh;
-        transition: background-color 0.5s,color 0.5s;
-    }
-
-    .home .topbar #contact:hover{
-        background-color: darkslategrey;
-        color: ghostwhite;
-    }
-
-    .home #message{
-        /*Margin*/
-        margin-top: 15vh;
-        margin-left: 15vw;
-        order: 2;
-
-    }
-
-    .home #pfp{
-        /*Margin*/
-        margin-top: 15vh;
-        margin-left: 15vw;
-        order: 1;
-
-    }
-
-    .home #pfp img{
-        /*Image Size*/
-        width: 45vw;
-        height: 45vw;
-
-    }
-
-    .home .footer{
-        margin-top: 7vw;
+    footer {
+        margin-top: 1px;
         display: flex;
-    }
-
-    .home .footer #linkedin{
-        margin-right: 1vw;
+        margin-right: 0;
         margin-left: auto;
+
+        #linkedin{
+            margin-right: 1vw;
+            margin-left: 15vw;
+            img {
+                width: 4vh;
+                height: auto;
+            }
+        }
+        #github{
+            margin-right: auto;
+            img {
+                width: 4vh;
+                height: auto;
+            }
+        }
     }
-    .home .footer #github{
-        margin-right: 1vw;
+}
+
+@media (orientation: landscape) and (max-height: 1180px) {
+    .home footer{
+
+
     }
-}
-/*Home Page*/
-
-body{
-    background-color: linen;
-    font-family: Bebas, sans-serif;
-}
-.home .content{
-    display: flex;
-    animation: fade-in 1s;
-}
-
-.home .topbar{
-    display: flex;
-    border-bottom: slategray 1px solid;
-    padding-bottom: 1vh;
-}
-
-.home .topbar #name{
-    margin-left: 1vw;
-    padding: 0.15vw 0.15vw 0.15vw 0.15vw;
-}
-
-.home .topbar #home{
-    margin-right: 1vw;
-    margin-left: auto;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    background-color: darkslategrey;
-    border-radius: 1vh;
-    color: ghostwhite;
-}
-.home .topbar #projects{
-    margin-right: 1vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    border-radius: 1vh;
-    transition: background-color 0.5s,color 0.5s;
-}
-
-.home .topbar #projects:hover{
-    background-color: darkslategrey;
-    color: ghostwhite;
-}
-.home .topbar #contact{
-    margin-right: 1vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    border-radius: 1vh;
-    transition: background-color 0.5s,color 0.5s;
-}
-
-.home .topbar #contact:hover{
-    background-color: darkslategrey;
-    color: ghostwhite;
-}
-
-.home #message{
-    /*Margin*/
-    margin-top: 15vh;
-    margin-left: 15vw;
-
-}
-
-.home #pfp{
-    /*Margin*/
-    margin-top: 15vh;
-    margin-right: 15vw;
-    margin-left: auto;
-
-}
-
-.home #pfp img{
-    /*Image Size*/
-    width: 30vw;
-    height: 30vw;
-
-}
-
-.home .footer{
-    margin-top: 7vw;
-    display: flex;
-}
-
-.home .footer #linkedin{
-    margin-right: 1vw;
-    margin-left: auto;
-}
-.home .footer #github{
-    margin-right: 1vw;
+    .content{
+        display: flex;
+        animation: fade-in 1s;
+        margin-top: 10vh;
+    }
 }
